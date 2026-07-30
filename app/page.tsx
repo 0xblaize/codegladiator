@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, BadgeDollarSign, Code2, ShieldCheck, Swords, Zap } from 'lucide-react'
+import { Activity, ArrowRight, Code2, CircleDot, Swords } from 'lucide-react'
 
 const VIDEO_SOURCE = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260328_115001_bcdaa3b4-03de-47e7-ad63-ae3e392c32d4.mp4'
 
@@ -15,10 +15,12 @@ export default function HomePage() {
         <h1 className="max-w-4xl text-5xl leading-[.9] tracking-tight sm:text-7xl lg:text-8xl" style={{ fontFamily: "'Instrument Serif', serif" }}>Code fast.<br /><em className="text-cyan-100">Get paid.</em></h1>
         <p className="mt-7 text-sm font-medium uppercase tracking-[.18em] text-white/55">No luck. Just proof.</p>
         <div className="mt-9"><Link href="/lobby" className="inline-flex min-h-12 items-center gap-3 rounded-full bg-white px-7 text-sm font-semibold text-black transition-transform hover:scale-[1.03]">Enter the arena <ArrowRight size={17} /></Link></div>
-        <div className="mt-14 grid w-full max-w-xl grid-cols-3 gap-2 text-left sm:gap-3">
-          <div className="liquid-glass rounded-2xl p-3 sm:p-4"><BadgeDollarSign size={18} className="text-emerald-200" /><p className="mt-4 text-lg font-semibold sm:text-2xl">150</p><p className="text-[10px] uppercase tracking-[.12em] text-white/40 sm:text-xs">USDT bounty</p></div>
-          <div className="liquid-glass rounded-2xl p-3 sm:p-4"><Zap size={18} className="text-amber-100" /><p className="mt-4 text-lg font-semibold sm:text-2xl">1st</p><p className="text-[10px] uppercase tracking-[.12em] text-white/40 sm:text-xs">to pass wins</p></div>
-          <div className="liquid-glass rounded-2xl p-3 sm:p-4"><ShieldCheck size={18} className="text-cyan-100" /><p className="mt-4 text-lg font-semibold sm:text-2xl">0%</p><p className="text-[10px] uppercase tracking-[.12em] text-white/40 sm:text-xs">middlemen</p></div>
+        <div className="liquid-glass mt-14 w-full max-w-2xl rounded-[1.75rem] p-4 text-left sm:p-5">
+          <div className="mb-4 flex items-center justify-between border-b border-white/10 pb-4">
+            <div className="flex items-center gap-3"><div className="flex size-9 items-center justify-center rounded-xl bg-white text-black"><Code2 size={17} /></div><div><p className="text-sm font-semibold text-white">Array Manipulation</p><p className="text-xs text-white/40">Web3Corp · live challenge</p></div></div>
+            <div className="text-right"><p className="text-lg font-semibold text-white">150 USDT</p><p className="text-[10px] uppercase tracking-[.15em] text-emerald-200/70">sponsored bounty</p></div>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-[1fr_auto] sm:items-center"><div><div className="mb-2 flex items-center justify-between text-xs text-white/45"><span className="flex items-center gap-1.5"><Activity size={13} /> Opponent progress</span><span className="text-white/75">2 / 5 tests</span></div><div className="h-1.5 overflow-hidden rounded-full bg-white/10"><div className="h-full w-[40%] rounded-full bg-gradient-to-r from-cyan-200 to-violet-300" /></div></div><div className="flex items-center gap-2 text-xs text-white/45"><CircleDot size={13} className="text-emerald-200" /> First to pass wins</div></div>
         </div>
       </section>
       <footer className="relative z-10 px-6 pb-8 text-center text-xs text-white/35">Demo mode · No wallet, judge, or funds connected yet.</footer>
