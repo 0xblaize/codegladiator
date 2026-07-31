@@ -93,13 +93,13 @@ export default function HomePage() {
         </div>
       </nav>
 
-      <section className="relative z-10 flex flex-1 -translate-y-[12%] flex-col items-center justify-center px-6 py-12 text-center">
-        <div className="mb-5 flex items-center gap-2 text-xs font-medium uppercase tracking-[.28em] text-white/60"><Code2 size={14} /><span>Merit over chance</span></div>
-        <h1 className="mb-8 whitespace-nowrap text-5xl tracking-tight text-white md:text-6xl lg:text-7xl" style={{ fontFamily: "'Instrument Serif', serif" }}>Built for the competitive</h1>
-        <div className="w-full max-w-xl space-y-5">
+      <section className="relative z-10 flex flex-1 flex-col items-center justify-center px-6 py-12 text-center">
+        <div className="-translate-y-[18%]">
+          <div className="mb-5 flex items-center justify-center gap-2 text-xs font-medium uppercase tracking-[.28em] text-white/60"><Code2 size={14} /><span>Merit over chance</span></div>
+          <h1 className="mb-8 whitespace-nowrap text-5xl tracking-tight text-white md:text-6xl lg:text-7xl" style={{ fontFamily: "'Instrument Serif', serif" }}>Built for the competitive</h1>
           <p className="px-4 text-sm leading-relaxed text-white">Solve real challenges. Prove your skill.<br />Win sponsor-funded bounties.</p>
-          <Link href="/lobby" className="liquid-glass inline-flex rounded-full px-8 py-3 text-sm font-medium text-white transition-colors hover:bg-white/5">Enter the arena</Link>
         </div>
+        <Link href="/lobby" className="liquid-glass absolute bottom-10 rounded-full px-8 py-3 text-sm font-medium text-white transition-colors hover:bg-white/5">Enter the arena</Link>
       </section>
     </main>
   )
