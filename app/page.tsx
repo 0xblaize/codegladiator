@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
-import { Code2, Globe, Swords } from 'lucide-react'
+import { Code2, Swords } from 'lucide-react'
 
 const VIDEO_SOURCE = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260328_115001_bcdaa3b4-03de-47e7-ad63-ae3e392c32d4.mp4'
 
@@ -86,7 +86,7 @@ export default function HomePage() {
       <nav className="relative z-20 px-6 py-6" aria-label="Main navigation">
         <div className="liquid-glass mx-auto flex max-w-5xl items-center justify-between rounded-full px-6 py-3">
           <div className="flex items-center gap-8">
-            <Link href="/" className="flex items-center gap-2 text-lg font-semibold text-white"><Globe size={24} /><span>CodeGladiator</span></Link>
+            <Link href="/" className="flex items-center gap-2 text-lg font-semibold text-white"><Swords size={24} strokeWidth={1.8} /><span>CodeGladiator</span></Link>
             <div className="hidden items-center gap-8 md:flex"><Link className="text-sm font-medium text-white/80 transition-colors hover:text-white" href="/lobby">Arena</Link><Link className="text-sm font-medium text-white/80 transition-colors hover:text-white" href="/sponsor">Sponsors</Link><Link className="text-sm font-medium text-white/80 transition-colors hover:text-white" href="/about">About</Link></div>
           </div>
           <div className="flex items-center gap-4"><button className="hidden text-sm font-medium text-white transition-colors hover:text-white/70 sm:block" type="button">Sign Up</button><Link className="liquid-glass rounded-full px-6 py-2 text-sm font-medium text-white transition-colors hover:bg-white/5" href="/lobby">Login</Link></div>
