@@ -99,8 +99,10 @@ export default function HomePage() {
           <h1 className="mb-5 whitespace-nowrap text-5xl tracking-tight text-white md:text-6xl lg:text-7xl" style={{ fontFamily: "'Instrument Serif', serif" }}>Built for the competitive</h1>
           <p className="px-4 text-sm leading-relaxed text-white">Solve real challenges. Prove your skill.<br />Win sponsor-funded bounties.</p>
         </div>
-        <Link href="/lobby" className="liquid-glass absolute bottom-3 rounded-full px-8 py-3 text-sm font-medium text-white transition-colors hover:bg-white/5 sm:bottom-5">Enter the arena</Link>
       </section>
+      <div className="relative z-10 flex justify-center pb-5 sm:pb-7">
+        <Link href="/lobby" className="liquid-glass rounded-full px-8 py-3 text-sm font-medium text-white transition-colors hover:bg-white/5">Enter the arena</Link>
+      </div>
     </main>
   )
 }
