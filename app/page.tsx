@@ -1,8 +1,8 @@
 'use client'
 
-import { FormEvent, useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
-import { ArrowRight, Camera, Code2, Globe, Send, Swords } from 'lucide-react'
+import { Code2, Globe, Swords } from 'lucide-react'
 
 const VIDEO_SOURCE = 'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260328_115001_bcdaa3b4-03de-47e7-ad63-ae3e392c32d4.mp4'
 
@@ -76,7 +76,6 @@ export default function HomePage() {
     }
   }, [])
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => event.preventDefault()
 
   return (
     <main className="relative flex min-h-screen flex-col overflow-hidden bg-black">
@@ -97,14 +96,11 @@ export default function HomePage() {
       <section className="relative z-10 flex flex-1 -translate-y-[12%] flex-col items-center justify-center px-6 py-12 text-center">
         <div className="mb-5 flex items-center gap-2 text-xs font-medium uppercase tracking-[.28em] text-white/60"><Code2 size={14} /><span>Merit over chance</span></div>
         <h1 className="mb-8 whitespace-nowrap text-5xl tracking-tight text-white md:text-6xl lg:text-7xl" style={{ fontFamily: "'Instrument Serif', serif" }}>Built for the competitive</h1>
-        <div className="w-full max-w-xl space-y-4">
-          <form onSubmit={handleSubmit} className="liquid-glass flex items-center gap-3 rounded-full py-2 pl-6 pr-2"><input className="min-w-0 flex-1 bg-transparent text-base text-white outline-none placeholder:text-white/40" type="email" placeholder="Enter your email" aria-label="Email for updates" /><button className="rounded-full bg-white p-3 text-black transition-transform hover:scale-105" type="submit" aria-label="Join CodeGladiator"><ArrowRight size={20} /></button></form>
-          <p className="px-4 text-sm leading-relaxed text-white">Solve real challenges. Prove your skill. Win sponsor-funded bounties.</p>
+        <div className="w-full max-w-xl space-y-5">
+          <p className="px-4 text-sm leading-relaxed text-white">Solve real challenges. Prove your skill.<br />Win sponsor-funded bounties.</p>
           <Link href="/lobby" className="liquid-glass inline-flex rounded-full px-8 py-3 text-sm font-medium text-white transition-colors hover:bg-white/5">Enter the arena</Link>
         </div>
       </section>
-
-      <footer className="relative z-10 flex justify-center gap-4 pb-12"><a className="liquid-glass rounded-full p-4 text-white/80 transition-all hover:bg-white/5 hover:text-white" href="#instagram" aria-label="Instagram"><Camera size={20} /></a><a className="liquid-glass rounded-full p-4 text-white/80 transition-all hover:bg-white/5 hover:text-white" href="#twitter" aria-label="Twitter"><Send size={20} /></a><a className="liquid-glass rounded-full p-4 text-white/80 transition-all hover:bg-white/5 hover:text-white" href="#website" aria-label="Website"><Globe size={20} /></a></footer>
     </main>
   )
 }
